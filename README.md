@@ -364,3 +364,42 @@ def insert(img_basic_origin_sql,img_bbox_origin_sql, dbname, host, user, passwd,
     mycursor.close()
     mydb.close()
 ```
+
+## 四、配置文件
+- 文件名称在*filename.yaml*文档中；
+```
+dir : "data/qingdao_ditie"
+data_dir : "total_data"
+index_dir : "class_index"
+train_dir : "train_data"
+val_dir : "val_data"
+label_csv_dir : "label_csv"
+label_txt_dir : "label_txt"
+class_index_json : "class_index/ob_classes.json"
+class_img_dir : "class_img_dir"
+tfrecord : "tf_record"
+pbtxt_path : "ob.pbtxt"
+split_ratio : 0.05
+```
+- 数据库相关操作的基本信息在*utils_db.conf*文档中。
+```
+[create]
+dbhost=192.168.20.249
+dbport=3306
+dbuser=root
+dbpassword=sunwin
+dbname=DB_Img
+dbcharset=utf8
+sql_path=/utils/utils_sql_create_DBImg
+
+[insert]
+img_basic_origin_sql=INSERT INTO img_basic_origin (id,filename,width,height,scene,spot_id,insert_times_index) VALUES (%s,%s,%s,%s,%s,%s,%s)
+img_bbox_origin_sql=INSERT INTO img_bbox_origin (id,filename,xmin,ymin,xmax,ymax,class_name,state_name,bbox_ratio,insert_times_index) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+img_basic_sql=INSERT INTO img_basic (id,filename,width,height,scene,spot_id,insert_times_index) VALUES (%s,%s,%s,%s,%s,%s,%s)
+img_bbox_sql=INSERT INTO img_bbox (id,filename,xmin,ymin,xmax,ymax,class_name,state_name,bbox_ratio,insert_times_index) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+
+
+[update]
+csv_dir = qingdao_ditie/label_csv
+csv_name = total_data.csv
+```
