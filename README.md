@@ -183,7 +183,7 @@ def xml_to_txt(data_dir, txt_dir, txt_name, class_index_json):
 - 数据库连接
 ```
 数据库连接方式为：
-主机号：192.168.20.249，端口：3306，用户名：root，密码：sunwin
+主机号：192.168.20.249，端口：3306
 ```
 - 数据库的实施
 ```
