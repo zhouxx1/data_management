@@ -190,6 +190,7 @@ def xml_to_txt(data_dir, txt_dir, txt_name, class_index_json):
 数据库选取MySQL，数据库名称为：DB_Img，由img_basic、img_bbox、img_basic_origin、img_bbox_origin、spot_basic、class_common、special_info、class_common八个数据表组成。其中，img_basic_origin、img_bbox_origin为img_basic、img_bbox的备份表。如表1所示。（若后续有其他新数据，可新建数据表）
 
 表1 数据库表的功能说明
+```
 |序号|表名|功能说明|
 |----|----|----|
 |1|img_basic|图片基本信息表，对图片信息添加、修改和查询|
@@ -198,7 +199,7 @@ def xml_to_txt(data_dir, txt_dir, txt_name, class_index_json):
 |4|class_common|标注类别是否通用|
 |5|special_info|场景中特殊情况描述|
 |6|class_common|种类状态对应信息表|
-```
+
 ### 5.数据上传
 
 - 数据上传到数据库中，以便以后复用。
