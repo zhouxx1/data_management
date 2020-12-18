@@ -409,10 +409,18 @@ csv_name = total_data.csv
 ## 五、数据库操作
 ### 1.创建数据表
 - CREATE TABLE table_name (column_name column_type);
-- 例： CREATE TABLE if not exists img_basic (id int(11) not null primary key AUTO_INCREMENT,filename varchar(128) not null,width int(11),height int(11),time datetime,scene varchar(128),spot_id int(11), source varchar(128), insert_times_index int(11));
+- 例： CREATE TABLE if not exists img_basic 
+                         (id int(11) not null primary key AUTO_INCREMENT,
+		         filename varchar(128) not null,width int(11),height int(11),
+		          time datetime,scene varchar(128),spot_id int(11), 
+		         source varchar(128), insert_times_index int(11));
 
 ### 2.数据插入
 
-- INSERT INTO img_basic_origin (id,filename,width,height,scene,spot_id,insert_times_index) VALUES (%s,%s,%s,%s,%s,%s,%s)
-- INSERT INTO img_bbox_origin (id,filename,xmin,ymin,xmax,ymax,class_name,state_name,bbox_ratio,insert_times_index) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+- INSERT INTO table_name ( field1, field2,...fieldN )
+                       VALUES
+                       ( value1, value2,...valueN )；
+- INSERT INTO img_basic ( id, filename, width, height, time, scene, spot_id, source, insert_times_index )
+                       VALUES
+                       ( 1, "MVI_0233000000.jpg",1920,1080,null,RGV,1,null,2 )；
 
