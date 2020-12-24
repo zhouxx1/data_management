@@ -500,14 +500,14 @@ csv_name = total_data.csv
 			[LIMIT N][ OFFSET M]
 
 ``` 
-	查询语句中你可以使用一个或者多个表，表之间使用逗号(,)分割，并使用WHERE语句来设定查询条件。
-	SELECT 命令可以读取一条或者多条记录。
-	你可以使用星号（*）来代替其他字段，SELECT语句会返回表的所有字段数据
-	你可以使用 WHERE 语句来包含任何条件。
-	你可以使用 LIMIT 属性来设定返回的记录数。
-	你可以通过OFFSET指定SELECT语句开始查询的数据偏移量。默认情况下偏移量为0。
+查询语句中你可以使用一个或者多个表，表之间使用逗号(,)分割，并使用WHERE语句来设定查询条件。
+SELECT 命令可以读取一条或者多条记录。
+你可以使用星号（*）来代替其他字段，SELECT语句会返回表的所有字段数据。
+你可以使用 WHERE 语句来包含任何条件。
+你可以使用 LIMIT 属性来设定返回的记录数。
+你可以通过OFFSET指定SELECT语句开始查询的数据偏移量。默认情况下偏移量为0。
 ```
 ```
 例：查询img_basic表中文件名称为 MVI_0233000000.jpg 的记录：
-	SELECT * FROM img_basic WHERE filename="MVI_0233000000.jpg";  
+   SELECT * FROM img_basic WHERE filename="MVI_0233000000.jpg";  
 ```
