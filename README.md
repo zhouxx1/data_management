@@ -219,6 +219,51 @@ def xml_to_txt(data_dir, txt_dir, txt_name, class_index_json):
 |11|第几次插入数据|insert_times_index|int(11)|  | 
 
 
+标注矩形框信息（img_bbox）
+|序号|中文描述|字段名|类型和精度|数据说明|
+|----|----|----|----|----|
+|1|文件序号|id|int (11)|Primary key, Not null，自增|
+|2|文件名称|filename|varchar (128)|Not null|
+|3|xmin|xmin|int (11)|  | 
+|4|ymin|ymin|int (11)|  | 
+|5|xmax|xmax|int (11)|  | 
+|6|ymax|ymax|int (11)|  | 
+|7|种类名称|class_name|varchar (128)|  | 
+|8|状态名称|state_name|varchar (128)|  | 
+|9|标注框占图片比例|bbox_ratio|float（32）|  | 
+|10|第几次插入数据|insert_times_index|int(11)|  | 
+
+
+地点信息（spot_basic）
+|序号|中文描述|字段名|类型和精度|数据说明|
+|----|----|----|----|----|
+|1|地点id|spot_id|int (11)|Primary key, Not null|
+|2|地点信息|spot|varchar (128)|  |
+
+
+通用信息（state_common）
+|序号|中文描述|字段名|类型和精度|数据说明|
+|----|----|----|----|----|
+|1|状态名称|state_name|varchar (128)|Primary key, Not null|
+|2|是否通用|is_common|varchar (20)|  |
+
+
+特殊信息（special_info）
+|序号|中文描述|字段名|类型和精度|数据说明|
+|----|----|----|----|----|
+|1|序号|special_id|int (11)|Primary key, Not null，自增|
+|2|地点信息|spot|varchar (128)|  |
+|3|特殊信息|description|varchar (128)|  |
+
+
+种类状态对应表（class_state）
+|序号|中文描述|字段名|类型和精度|数据说明|
+|----|----|----|----|----|
+|1|种类名称|class_name|varchar (128)|Primary key, Not null|
+|2|状态名称|state_name|varchar (128)|  |
+
+
+
 ### 5.数据上传
 
 - 数据上传到数据库中，以便以后复用。
