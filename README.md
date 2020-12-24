@@ -202,7 +202,7 @@ def xml_to_txt(data_dir, txt_dir, txt_name, class_index_json):
 |5|special_info|场景中特殊情况描述|
 |6|class_common|种类状态对应信息表|
 
-- 各表信息
+
 图片基本信息（img_basic）
 |序号|中文描述|字段名|类型和精度|数据说明|
 |----|----|----|----|----|
