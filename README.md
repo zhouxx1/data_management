@@ -208,15 +208,15 @@ def xml_to_txt(data_dir, txt_dir, txt_name, class_index_json):
 |----|----|----|----|----|
 |1|文件序号|id|int (11)|Primary key, Not null，自增|
 |2|文件名称|filename|varchar (128)|Not null|
-|3|文件路径|path|varchar (128)| | 
-|4|图片宽度|width|int (11)| | 
+|3|文件路径|path|varchar (128)|  | 
+|4|图片宽度|width|int (11)|  | 
 |5|图片高度|height|int (11)|  | 
 |6|图片深度|depth|int (11)|  | 
-|7|录入时间|time|datetime| | 
+|7|录入时间|time|datetime|  | 
 |8|场景|scene|varchar (128)|  | 
-|9|地点id|spot_id|int(11)| | 
+|9|地点id|spot_id|int(11)|  | 
 |10|来源信息|source|varchar (128)|  | 
-|11|第几次插入数据|insert_times_index|int(11)| | 
+|11|第几次插入数据|insert_times_index|int(11)|  | 
 
 
 ### 5.数据上传
@@ -437,7 +437,7 @@ csv_name = total_data.csv
 - INSERT INTO table_name ( field1, field2,...fieldN )
                        VALUES
                        ( value1, value2,...valueN )；
-- INSERT INTO img_basic ( id, filename, width, height, time, scene, spot_id, source, insert_times_index )
+- 例： INSERT INTO img_basic ( id, filename, width, height, time, scene, spot_id, source, insert_times_index )
                        VALUES
                        ( 1, "MVI_0233000000.jpg",1920,1080,null,RGV,1,null,2 )；
 
