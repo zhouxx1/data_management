@@ -21,6 +21,9 @@ ___
 * [四、配置文件](#四-配置文件)
 
 * [五、数据库操作](#五-数据库操作)
+        * [1、创建数据表](#1-创建数据表)
+	* [2、数据插入](#2-数据插入)
+	* [3、数据查询](#3-数据查询)
 
 ## 一、项目背景
 
@@ -485,4 +488,23 @@ csv_name = total_data.csv
 - 例： INSERT INTO img_basic ( id, filename, width, height, time, scene, spot_id, source, insert_times_index )
                        VALUES
                        ( 1, "MVI_0233000000.jpg",1920,1080,null,RGV,1,null,2 )；
+		      
+
+### 3.数据查询
+
+- SELECT column_name,column_name
+			FROM table_name
+			[WHERE Clause]
+			[LIMIT N][ OFFSET M]
+
+- 
+    查询语句中你可以使用一个或者多个表，表之间使用逗号(,)分割，并使用WHERE语句来设定查询条件。
+    SELECT 命令可以读取一条或者多条记录。
+    你可以使用星号（*）来代替其他字段，SELECT语句会返回表的所有字段数据
+    你可以使用 WHERE 语句来包含任何条件。
+    你可以使用 LIMIT 属性来设定返回的记录数。
+    你可以通过OFFSET指定SELECT语句开始查询的数据偏移量。默认情况下偏移量为0。
+
+- 例：查询img_basic表中文件名称为 MVI_0233000000.jpg 的记录：
+SELECT * FROM img_basic WHERE filename="MVI_0233000000.jpg";  
 
